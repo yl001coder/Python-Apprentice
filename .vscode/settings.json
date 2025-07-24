@@ -4,6 +4,7 @@
         "**/.svn": true,
         "**/.hg": true,
         "**/Thumbs.db": true,
+        "**/*.crswap": true,
         "**/__pycache__": true,
         "**/.cache": true,
         "**/.coverage": true,
