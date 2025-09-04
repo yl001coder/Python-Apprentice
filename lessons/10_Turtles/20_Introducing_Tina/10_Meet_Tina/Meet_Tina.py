@@ -5,7 +5,7 @@ hexagon with legs and a head.
 
 You can run this program by:
 
-1) clicking on ▶️ icon ar the top of the editor
+1) clicking on ▶️ icon at the top of the editor
 window
 2) Hit the F5 function key
 
