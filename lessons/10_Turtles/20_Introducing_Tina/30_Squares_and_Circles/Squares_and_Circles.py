@@ -35,7 +35,7 @@ tina.forward(200)                       # Move tina forward by the forward dista
 tina.right(90)                          # Turn tina left by the left turn
 
 tina.pencolor('red')                    # Set the pen color to red
-tina.forward(200)                       # Continuie the last two steps three more times
+tina.forward(200)                       # Continue the last two steps three more times
 tina.right(90)                           # to draw a square
 
 tina.pencolor('green')                  # Set the pen color to green
