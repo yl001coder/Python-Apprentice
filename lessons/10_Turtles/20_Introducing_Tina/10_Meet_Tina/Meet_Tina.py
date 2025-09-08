@@ -1,5 +1,4 @@
 """
-
 Run this program to meet Tina the Turtle. Tina is a
 hexagon with legs and a head.
 
@@ -12,7 +11,6 @@ window
 You won't understand what this program is doing just
 yet, but don't worry, that's what you will be
 learning in the next few lessons.
-
 """
 
 import turtle                           # Tell Python we want to work with the turtle
