@@ -15,8 +15,8 @@ screen = turtle.Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor('white')
 
-t = turtle.Turtle()
 
+t = turtle.Turtle
 def set_turtle_image(turtle, image_name):
     """Set the turtle's shape to a custom image."""
 
@@ -31,7 +31,7 @@ def set_turtle_image(turtle, image_name):
 set_turtle_image(t,'leaguebot_bot.gif')
 t.turtlesize(10,10,12)
 t.turtlesize(outline=3)
-turtle.pencolor('blue')
+turtle.pencolor('blue') 
 
 def draw_polygon(sides,length):
     angle = 360/sides
