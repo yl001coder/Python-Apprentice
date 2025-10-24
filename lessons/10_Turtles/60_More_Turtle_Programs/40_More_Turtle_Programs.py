@@ -21,8 +21,7 @@ t = turtle.Turtle()
 t.shape("turtle")
 t.turtlesize(stretch_wid=10, stretch_len=10, outline=4) # Make the turtle really big
 import random
-x = random.randint(-300, 300)
-y = random.randint(-300, 300)
+
 def turtle_clicked(t, x, y):
     """
     Args:
