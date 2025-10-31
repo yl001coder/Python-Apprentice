@@ -7,7 +7,15 @@
 
 """
 
-
+for i in range(360):
+    if(i%5!=0&i%3!=0):
+        print(i)
+    if(i%5 == 0 & i%3 == 0):
+        print("annabelle needs to touch grass")
+    elif(i%5 == 0):
+        print("fizz")
+    elif(i%3 == 0):
+        print("buzz")
 import  jtl_lib  # type: ignore
 jtl_lib.add_path()
 from lib.badgers import FizzBuzzer

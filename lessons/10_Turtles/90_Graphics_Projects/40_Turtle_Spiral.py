@@ -38,7 +38,7 @@ for i in range(50):
     myTurtle.right(360 / 7 + i*5)
 
     # Change the turtle width to 'i' (the loop variable)
-    myTurtle.width(i)
+    myTurtle.width(2)
 
     # Check the pattern against the picture in the recipe. If it matches, you are done!
 
