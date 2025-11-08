@@ -19,19 +19,24 @@ For the number, you can ask for a float or an integer with
 simpledialog.askfloat() or simpledialog.askinteger(), and for the math operation
 you can ask for a string with simpledialog.askstring().
 """
-
+from tkinter import simpledialog, messagebox, Tk
 # Import the required modules
-
+window = Tk()
+window.withdraw()
 # Create a window object
 
 # Hide the window, hint: use the withdraw method
 
 # Ask the user for the first number   
+num1 = simpledialog.askfloat("Infuriating Calculator", "What is your first number?")
 
 # Ask the user for the second number
+num2 = simpledialog.askfloat("Infuriating Calculator", "What is your second number?")
 
 # Ask the user for the math operation
-
+operation = simpledialog.askstring("Infuriating Calculator", "What is the operation [string only]")
+if(operation == "addition"):
+    messagebox.showinfo("Your Answer")
 # Use if-elif-else statements to provide the desired math operation on the numbers and display the result.
 
 # If the user enters an unknown operation, display an error message. ( use messagebox.showerror()

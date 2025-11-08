@@ -35,5 +35,23 @@ def main():
     return "Done!"
 
 
+"""
+Commons: Gingerbrave, Angel, Muscle, Beet, Ninja, Strawberry, Wizard
+Rares: Blackberry, Carrot, Clover, Onion, Custard Cookie III, Gumball, Cherry, Devil, Adventurer, Princess, Avocado, Alchemist, Knight
+Epics: 
+[bomber]
+[ambush]
+[healer]
+[defence]
+[charge]
+[ranged]
+[magic]
+'
+
+Super Epics: Doughael, Shining Glitter, Clotted Cream, Stardust, Oyster, Capsaicin, Sherbet, Crimson Coral, 
+Specials: Marshmallow Bunny, Snapdragon, Icicle Yeti, Creme Ferret
+Legendary: Sea Fairy, Frost Queen, Stormbringer,  Black Pearl, 
+"""
+
 main()              
 turtle.done()

@@ -6,6 +6,7 @@ You can run this program by:
 
 1) clicking on ▶️ icon at the top of the editor
 window
+
 2) Hit the F5 function key
 
 You won't understand what this program is doing just
