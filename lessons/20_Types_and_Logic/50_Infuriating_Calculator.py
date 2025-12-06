@@ -26,7 +26,13 @@ window.withdraw()
 # Create a window object
 
 # Hide the window, hint: use the withdraw method
+def addNumbers(a,b):
+    sum = a + b 
+    print(sum)
 
+def subNumbers(a,b):
+    sub = a - b
+    print(sub)    
 # Ask the user for the first number   
 num1 = simpledialog.askfloat("Infuriating Calculator", "What is your first number?")
 
@@ -36,7 +42,8 @@ num2 = simpledialog.askfloat("Infuriating Calculator", "What is your second numb
 # Ask the user for the math operation
 operation = simpledialog.askstring("Infuriating Calculator", "What is the operation [string only]")
 if(operation == "addition"):
-    messagebox.showinfo("Your Answer")
+    messagebox.showinfo(addNumbers(num1, num2)
+elif(operation == "subtraction")
 # Use if-elif-else statements to provide the desired math operation on the numbers and display the result.
 
 # If the user enters an unknown operation, display an error message. ( use messagebox.showerror()
