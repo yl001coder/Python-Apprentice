@@ -13,13 +13,15 @@ from tkinter import messagebox, simpledialog, Tk
 window = Tk()
 window.withdraw()
 # Hide the window, hint: use the withdraw method
-
+def addNumbers(num1,num2):
+    num3 = num1 + num2
+    return str(num3)
 # Ask the user for the first number
 num1 = simpledialog.askfloat("Simple Adder", "What is your first number?")
 # Ask the user for the second number
 num2 = simpledialog.askfloat("Simple Adder", "What is your second number?")
-num3 = num1 + num2
-messagebox.showinfo("Simple Adder", "Your number is " + num3)
+
+messagebox.showinfo("Simple Adder", addNumbers(num1, num2))
 # Display the sum of the two numbers 
 
 # Keep the window open

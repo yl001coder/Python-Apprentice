@@ -21,8 +21,9 @@ an error message will be displayed and new definitions will not be added.
 """
 
 # Implement the functions below
-
+d = dict()
 def add_definition(db, key, value):
+    
     """
     Add a new definition to the database.
 
@@ -35,18 +36,22 @@ def add_definition(db, key, value):
     - None
 
     If there are already 5 items in the database, an error message is displayed and the new item is not added.
+  
     """
 
     # Check the limit
 
     # Set the item in the database
-
+    add_definition(d,"Wind Archer", "a majestic being that flows through the wind, protecting the forest with his sacred bow.")
+    add_definition(d,"Husk","a former overlord who resembles a cat in Hell and has a drinking addiction also loves angel")
+    add_definition(d,"Jax","a purple rabbit who doesn't let anyone get close to him because two of his friends already abstracted.")
+    add_definition(d, "a")
     pass
 
 
 def delete_definition(db, key):
     """
-    Deletes the definition associated with the given key from the database.
+    Deletes the definition associated with the given key from the database wind archer is awesome and he's awesome.
 
     Args:
         db (dict): The database containing the key-value pairs.
