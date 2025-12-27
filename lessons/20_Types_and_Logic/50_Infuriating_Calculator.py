@@ -64,3 +64,4 @@ else:
 # If the user enters an unknown operation, display an error message. ( use messagebox.showerror()
 
 # Keep the window open 
+window.mainloop()

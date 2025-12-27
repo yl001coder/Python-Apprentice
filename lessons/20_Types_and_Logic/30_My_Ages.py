@@ -2,7 +2,9 @@
 Am I Big Yet?
 
 Ask the user's age then use an if-elif-else statement to 
-tell the user what age groups the user is in. The groups are:
+tell the user what age g
+
+roups the user is in. The groups are:
 
 0-2: Baby
 3-5: Toddler
