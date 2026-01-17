@@ -34,8 +34,22 @@ app = App("Numbers Grid", layout="grid")
           
 for i in range(10):
     for j in range(1,11):
-        print(f"{j + i*10}", end= ' ')
-    print()
+        if((j + i*10)%15 == 0):
+            Text(app, text='🐍', grid=[j,i])
+            print("🐍", end= ' ')
+        elif((j + i*10)%5 == 0):
+            Text(app, text='🦡', grid=[j,i])
+            print("🦡", end= ' ')
+        elif((j + i*10)%3 == 0):
+            Text(app, text='🍄', grid=[j,i])
+            print("🍄", end= '')
+        elif((j + i*10)%2 ==0):
+            Text(app, text=f"{j + i*10}", grid=[j,i], color="blue")
+            print(f"{j + i*10}", end= ' ')
+        elif((j + i*10)%2 == 1):
+            Text(app, text=f"{j + i*10}", grid=[j,i], color="red")
+            print(f"{j +i*10}", end= ' ')
+    print() 
 
 # Create a 10x10 grid using nested loops
 # Or you can use a single loop and calculate the row and column

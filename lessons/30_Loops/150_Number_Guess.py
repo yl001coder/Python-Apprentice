@@ -31,9 +31,11 @@ at the bottom of the editor screen; this program does not use the GUI.
 """
 
 import random
+from tkinter import simpledialog, messagebox, Tk
 
 def ask_integer(prompt):
     """Function to ask the user for an integer"""
+    messagebox.showinfo('Question Box', prompt)
     while True:
         try:
             return int(input(prompt))
@@ -41,7 +43,8 @@ def ask_integer(prompt):
             print("Please enter a valid number!")
 
 # Pick the random number
-
+n = random.randint(1,100)
+while
 # In your loop:
 
     # Get the user's guess
