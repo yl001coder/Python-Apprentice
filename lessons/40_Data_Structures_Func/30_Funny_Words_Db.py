@@ -42,12 +42,15 @@ def add_definition(db, key, value):
     # Check the limit
 
     # Set the item in the database
-    add_definition(d,"Wind Archer", "a majestic being that flows through the wind, protecting the forest with his sacred bow.")
-    add_definition(d,"Husk","a former overlord who resembles a cat in Hell and has a drinking addiction also loves angel")
-    add_definition(d,"Jax","a purple rabbit who doesn't let anyone get close to him because two of his friends already abstracted.")
-    add_definition(d, "a")
+    addingstuff()
+
     pass
 
+add_definition(d,"Molly", "Angel Dust's sister, named after the drug methylenedioxymethmphetamine, is a winner in Heaven")
+add_definition(d,"Angel Dust", "named after the drug phencyclidine, he is a sinner in Hell currently trying to redeem himself at Charlie Morningstar's Hazbin Hotel")
+add_definition(d,"Decidueye", "a majestic owl-like being that can be found in the forests of Theia Sky Ruins")
+add_definition(d,"Meepscarada", "an interesting pokemon found in the Tokemon realm who likes eating peanuts")
+add_definition(d,"Science Olympiad", "a form of torture used to inflict sadness on unfortunate asian children")
 
 def delete_definition(db, key):
     """
@@ -62,7 +65,8 @@ def delete_definition(db, key):
     """
 
     # Delete the item from db if it is present
-
+    if(key in db):
+        _delete_definition() 
     pass
 
 
@@ -94,9 +98,7 @@ def update_listbox(db):
     # This function will return a list of definitions to be displayed in the listbox, like
     # the one below. (For your function, you should set this list to the empty list)
     l = [
-        "Item 1: Fake Definition 1",
-        "Item 2: Fake Definition 2",
-        "Item 3: fake Definition 3"
+        
     ]
 
     # Add each definition to a string
@@ -109,7 +111,7 @@ def update_listbox(db):
 
 # Function to add a definition
 
-def _add_definition():
+def addingstuff():
     word = word_entry.value.strip()
     definition = definition_entry.value.strip()
     
