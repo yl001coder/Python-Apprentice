@@ -22,6 +22,7 @@ an error message will be displayed and new definitions will not be added.
 
 # Implement the functions below
 d = dict()
+
 def add_definition(db, key, value):
     
     """
@@ -42,15 +43,8 @@ def add_definition(db, key, value):
     # Check the limit
 
     # Set the item in the database
-    addingstuff()
+    db[key] = value
 
-    pass
-
-add_definition(d,"Molly", "Angel Dust's sister, named after the drug methylenedioxymethmphetamine, is a winner in Heaven")
-add_definition(d,"Angel Dust", "named after the drug phencyclidine, he is a sinner in Hell currently trying to redeem himself at Charlie Morningstar's Hazbin Hotel")
-add_definition(d,"Decidueye", "a majestic owl-like being that can be found in the forests of Theia Sky Ruins")
-add_definition(d,"Meepscarada", "an interesting pokemon found in the Tokemon realm who likes eating peanuts")
-add_definition(d,"Science Olympiad", "a form of torture used to inflict sadness on unfortunate asian children")
 
 def delete_definition(db, key):
     """
@@ -63,11 +57,8 @@ def delete_definition(db, key):
     Returns:
         None
     """
-
+    del db[key]
     # Delete the item from db if it is present
-    if(key in db):
-        _delete_definition() 
-    pass
 
 
 def is_funny(definition):
@@ -82,9 +73,11 @@ def is_funny(definition):
     Returns:
         bool: True if the definition contains any of the funny words, False otherwise.
     """
-    
-    # Return True if the definition contains any of the funny words, False otherwise
-
+    m = ['fun', 'funny', 'hilarious', 'amusing', 'pants', 'spleen']
+    l = definition.split()
+    for i in l:
+        if(i in m):
+            return True
     return False
 
 def update_listbox(db):
@@ -97,10 +90,12 @@ def update_listbox(db):
 
     # This function will return a list of definitions to be displayed in the listbox, like
     # the one below. (For your function, you should set this list to the empty list)
-    l = [
-        
-    ]
-
+    l = list()
+    for (k,v) in db.items():
+        l.append(f"{k}: {v}")
+ 
+    
+    
     # Add each definition to a string
     # iterate over the dict's key-value pairs and turn them into
     # strings, then add the strings to the list with .append()
@@ -111,7 +106,7 @@ def update_listbox(db):
 
 # Function to add a definition
 
-def addingstuff():
+def _add_definition():
     word = word_entry.value.strip()
     definition = definition_entry.value.strip()
     
@@ -141,7 +136,7 @@ def _delete_definition():
     if selected_item:
         word = selected_item.split(":", 1)[0].strip()
         if word in db:
-            del db[word]
+            delete_definition(db,word)
             _update_listbox(db)
 
 # Main app
