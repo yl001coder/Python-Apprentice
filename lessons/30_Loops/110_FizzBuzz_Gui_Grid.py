@@ -30,6 +30,7 @@ or you can convert the number to a string and iterate over the digits
 
 from guizero import App, Box, Text
 
+
 app = App("Numbers Grid", layout="grid")
           
 for i in range(10):

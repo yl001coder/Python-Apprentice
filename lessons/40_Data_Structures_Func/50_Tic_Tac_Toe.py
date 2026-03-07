@@ -1,6 +1,8 @@
 #imports
 from guizero import App, Box, PushButton, Text, info
 
+
+
 X_MARK = "X"
 O_MARK = "O"
 
@@ -16,6 +18,10 @@ def check_row(l):
         The winner's token ( x or o ) if there is one, otherwise None
         """
 
+    o = set(l)
+    if(len(o) ==1):
+        e = len(o)
+        return str(e)
     return None
 
 def check_win(board):
@@ -27,6 +33,17 @@ def check_win(board):
         The winner's token ( x or o ) if there is one, otherwise None
     """
 
+    for m in range(3):
+        for i in range(1):
+            l = list(zip(*board))
+            check_row(l[m])
+        for i in range(1):
+            check_row(board[m])
+        for i in range(1):
+            d1 = [ board[i][i] for i in range(3) ]
+            check_row(d1)
+            d2 = [board[i][abs(i -2)] for i in range(3) ]
+            check_row(d2)
     return None
 
 # The following code is the main part of the program. It creates a GUI for the
@@ -43,7 +60,7 @@ class TicTacToe:
     message = None
     turn_n = 0
     turn = X_MARK
-
+    
     def __init__(self, win_func=check_win):
         self.board = None # The stoage for user's markers
         
@@ -93,7 +110,7 @@ class TicTacToe:
 
         winner = self.win_func(self.board)
 
-        if winner:
+        if self.win_func(self.board):
             self.message.value = f"Player {winner} won!"
             info("Tic-tac-toe",f"Player {winner} won!")
             for row in self.buttons:
