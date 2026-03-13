@@ -41,6 +41,7 @@ def ask_integer(prompt):
             return int(input(prompt))
         except ValueError:
             print("Please enter a valid number!")
+           
 
 # Pick the random number
 game = True
@@ -56,17 +57,19 @@ def getnumber():
     return n
 while game == True:
     n = getnumber()
-    ip = simpledialog.askinteger("question box", "What is your number?")
+    ip = simpledialog.askinteger("question box", "What is my number?")
     if(ip == n):
-        messagebox.showinfo("question box", "Yay! You guessed correctly! Play again if you want to")
+        simpledialog.showinfo("Yay! You guessed correctly! Play again if you want to")
         break
     elif(ip%7 == 0):
-        messagebox.showinfo("question box","start over!")
+        simpledialog.showinfo("start over!")
         break
     elif(ip > n):
-        messagebox.showinfo("question box","your number is too high")
+        simpledialog.showinfo("your number is too high")
+        name = input("hello")
+        print(f"{name}")
     elif(ip < n):
-        messagebox.showinfo("question box","your number is too low")
+        simpledialog.showinfo("your number is too low")\
    
 
 # In your loop:

@@ -15,13 +15,13 @@ def check_row(l):
         l: a 3 element iterable
         
     Returns:
-        The winner's token ( x or o ) if there is one, otherwise None
+        The winner's token (x or o) otherwise return None
         """
 
     o = set(l)
     if(len(o) ==1):
-        e = len(o)
-        return str(e)
+        winner = len(o)
+        return True, str(winner)
     return None
 
 def check_win(board):
@@ -31,24 +31,20 @@ def check_win(board):
     
     Returns:
         The winner's token ( x or o ) if there is one, otherwise None
+        
     """
-
+    l = zip(*board)
     for m in range(3):
-        for i in range(1):
-            l = list(zip(*board))
-            check_row(l[m])
-        for i in range(1):
-            check_row(board[m])
-        for i in range(1):
-            d1 = [ board[i][i] for i in range(3) ]
-            check_row(d1)
-            d2 = [board[i][abs(i -2)] for i in range(3) ]
-            check_row(d2)
+        check_row(l[m])
+    for e in zip(l):
+        check_row(e)
+    check_row(d1 = [ board[i][i] for i in range(3)])
+    check_row(d2 = [ board[i][abs(i-2)] for i in range(3)])
     return None
 
 # The following code is the main part of the program. It creates a GUI for the
 # game and handles the game logic. Implement the functions above first, then
-# after your program is working you can try chaning the code below. 
+# after your program is working you can try changing the code below. Until then
 
 class TicTacToe:
     """A Simple Tic Tac Toe game"""
@@ -104,6 +100,7 @@ class TicTacToe:
         self.board[x][y] = self.current_turn
         self.buttons[x][y].text = self.current_turn
         self.buttons[x][y].disable()
+        ##self.win_func
 
         self.turn_n += 1
         self.message.value = f"It's your turn, {self.current_turn}"
@@ -119,6 +116,7 @@ class TicTacToe:
         elif self.turn_n == 9:
             self.message.value = "It's a draw!"
             info("Tic-tac-toe","It's a draw!")
+        
 
 ttt = TicTacToe(check_win)
 ttt.start()
