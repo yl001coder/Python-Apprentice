@@ -20,8 +20,12 @@ def check_row(l):
 
     o = set(l)
     if(len(o) ==1):
-        winner = len(o)
-        return True, str(winner)
+        winner = l[0]
+        print(winner)
+        if(winner == X_MARK):
+            return X_MARK
+        elif(winner == O_MARK):
+            return O_MARK
     return None
 
 def check_win(board):
@@ -33,13 +37,21 @@ def check_win(board):
         The winner's token ( x or o ) if there is one, otherwise None
         
     """
-    l = zip(*board)
+    l = list(zip(*board))
     for m in range(3):
-        check_row(l[m])
-    for e in zip(l):
-        check_row(e)
-    check_row(d1 = [ board[i][i] for i in range(3)])
-    check_row(d2 = [ board[i][abs(i-2)] for i in range(3)])
+        w = check_row(l[m])
+        if(w != None):
+            return w
+    for e in range(3):
+        w = check_row(board[e])
+        if(w != None):
+            return w
+    w = check_row([ board[i][i] for i in range(3)])
+    if(w != None):
+            return w
+    w = check_row([ board[i][abs(i-2)] for i in range(3)])
+    if(w != None):
+            return w
     return None
 
 # The following code is the main part of the program. It creates a GUI for the
